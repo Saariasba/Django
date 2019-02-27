@@ -1,0 +1,9 @@
+{% if UltimaListaDePreguntas %}
+    <ul>
+    {% for pregunta in UltimaListaDePreguntas %}
+        <li><a href="{% url 'Encuestas:detalles' pregunta.id %}">{{ pregunta.TextoDePregunta }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay Encuestas.</p>
+{% endif %}
